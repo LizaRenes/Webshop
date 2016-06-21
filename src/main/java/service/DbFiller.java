@@ -5,6 +5,7 @@
  */
 package service;
 
+import java.util.ArrayList;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -32,9 +33,17 @@ public class DbFiller {
     
     public void databaseFiller(){
         Product kattenvoer = new Product("Kattenvoer","Heerlijk en zeer voedzaam", 2.99);
+        Product hondenvoer = new Product("Hondenvoer", "Speciaal voor uw hond het allerbeste", 4.99);
+        Product kattenmand = new Product("Kattenmand", "Speciaal voor uw kat het allerbeste", 9.99);
+        //je kan niet een collection object persisten!
         
-        //producten toevoegen, in ArrayList? vervolgens met een loop persisten
         entityManager.persist(kattenvoer);
+        LOG.info("product in DB");
+        
+        entityManager.persist(hondenvoer);
+        LOG.info("product in DB");
+        
+        entityManager.persist(kattenmand);
         LOG.info("product in DB");
         
     }
