@@ -1,17 +1,9 @@
-<%-- 
-    Document   : index.jsp
-    Created on : Jun 20, 2016, 9:43:17 AM
-    Author     : lrenes
---%>
+    var  controllers = {}; 
+    petApp.controller('mainController', function($scope,$http) {
+        $scope.producten=[];
+        $http.get('/webshop/rest/producten/').then(function(data){
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+            $scope.producten = data.data;
+            console.log($scope.producten.toString());
+        });
+    });
