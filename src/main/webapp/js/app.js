@@ -15,12 +15,10 @@ petApp.config(function ($routeProvider) {
                 controller: 'js/controllers/mainController'
             })
            .when('/shoppingCart', {
-                 templateUrl: 'html/shoppingCsart.html',
+                 templateUrl: 'html/shoppingCart.html',
                  controller: 'js/controllers/mainController'
             });
 //            .otherwise({
 //                redirectTo: 'html/producten.html'
 //   });
 });
-
-    

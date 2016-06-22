@@ -1,0 +1,8 @@
+service\ApplicationConfig.class
+product\Product.class
+service\DbFiller$DbFillerHolder.class
+product\Product_.class
+java\util\Hashset.class
+service\ProductFacadeREST.class
+service\AbstractFacade.class
+service\DbFiller.class
