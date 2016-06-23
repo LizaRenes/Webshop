@@ -1,3 +1,4 @@
+
 petApp.controller('mainController', ['$scope', '$http', function($scope, $http) { 
     
     var producten = [];
@@ -11,5 +12,3 @@ petApp.controller('mainController', ['$scope', '$http', function($scope, $http) 
     });
     
 }]);
-
-
